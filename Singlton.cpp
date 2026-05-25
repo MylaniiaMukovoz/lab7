@@ -55,6 +55,7 @@ PrinterManager *PrinterManager::instance = NULL;
 
 int main() {
 
+ 
     PrinterManager *ptr = PrinterManager::get_instance();
     ptr->setHasPages(true);
     ptr->setHasInk(true);
@@ -71,6 +72,8 @@ int main() {
     cout << "Has ink: " << ptr2->getHasInk() << endl;
     cout << "PrinterManager2: " << ptr2->get_instance() << endl;
 
+
+    
     delete ptr;
     delete ptr2;
 

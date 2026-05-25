@@ -54,34 +54,34 @@ class Builder {
             phone = new Phone;
         }
 
-        Builder buildBrand(string brand){
+        Phone* buildBrand(string brand){
             phone->setBrand(brand);
-            return *this;
+            return phone;
         }
 
-        Builder buildModel(string model){
+        Phone* buildModel(string model){
             phone->setModel(model);
-            return *this;
+            return phone;
         }
 
-        Builder buildRAM(int RAM){
+        Phone* buildRAM(int RAM){
             phone->setRAM(RAM);
-            return *this;
+            return phone;
         }
 
-        Builder buildStorage(int storage){
+        Phone* buildStorage(int storage){
             phone->setStorage(storage);
-            return *this;
+            return phone;
         }
 
-        Builder buildBattery(int batteryCapacity){
+        Phone* buildBattery(int batteryCapacity){
             phone->setBattery(batteryCapacity);
-            return *this;
+            return phone;
         }
 
-        Builder buildCamera(int camera){
+        Phone* buildCamera(int camera){
             phone->setCamera(camera);
-            return *this;
+            return phone;
         }
 
         Phone *build(){
@@ -92,21 +92,21 @@ class Builder {
 class Director{
     public:
         void construct_iPhone(Builder &builder){
-            builder.buildBrand("Apple")
-                    .buildModel("iPhone 13")
-                    .buildRAM(4)
-                    .buildStorage(128)
-                    .buildBattery(3240)
-                    .buildCamera(12);
+            builder.buildBrand("Apple");
+            builder.buildModel("iPhone 13");
+            builder.buildRAM(4);
+            builder.buildStorage(128);
+            builder.buildBattery(3240);
+            builder.buildCamera(12);
         }
 
         void construct_Pixel(Builder &builder){
-            builder.buildBrand("Google")
-                    .buildModel("Pixel 9 Pro")
-                    .buildRAM(16)
-                    .buildStorage(256)
-                    .buildBattery(4700)
-                    .buildCamera(50);
+            builder.buildBrand("Google");
+            builder.buildModel("Pixel 9 Pro");
+            builder.buildRAM(16);
+            builder.buildStorage(256);
+            builder.buildBattery(4700);
+            builder.buildCamera(50);
         }
 };
 
